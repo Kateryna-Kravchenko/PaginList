@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView android:layout_width="0dp"
+              android:id="@+id/title"
+              app:layout_constraintTop_toTopOf="parent"
+              android:layout_gravity="center"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_between_view"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_marginEnd="@dimen/margin_between_view"
+              app:layout_constraintEnd_toStartOf="@+id/time"/>
+    <TextView android:layout_width="0dp"
+              android:id="@+id/author"
+              android:layout_gravity="center"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/margin_between_view"
+              android:layout_marginTop="@dimen/margin_between_view"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/title"
+              app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:id="@+id/time"
+              android:layout_marginTop="@dimen/margin_between_view"
+              android:layout_height="wrap_content"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+    />
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/colorAccent"
+          app:layout_constraintBottom_toBottomOf="@+id/author"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_marginTop="@dimen/margin_between_view"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/author"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
