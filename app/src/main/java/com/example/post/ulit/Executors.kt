@@ -14,7 +14,7 @@ fun ioThread(f: () -> Unit) {
 
 fun ioThreadDelay(f: () -> Unit) {
     IO_EXECUTOR_WITH_DELAY.execute {
-        Thread.sleep(5000)
+        Thread.sleep(1000)
         f()
     }
 }
